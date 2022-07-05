@@ -1,0 +1,62 @@
+
+body{
+    background:antiquewhite;
+    font-family: Arial,sans-serif;
+}
+.container{
+    background: #f6f6f6;
+    width: 320px;
+    height: 550px;
+    border-radius:30px;
+    box-shadow: 8px 8px 13px #cacaca, -8px -8px 13px #ffffff;
+    margin: 40px auto;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .result{
+    width: 300px;
+    height: 150px;
+}
+.container .result p{
+    font-size: 45pt;
+    overflow-y:auto ;
+    text-align: right;
+
+}
+.container .buttons{
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-gap: 1em;
+
+}
+.container .buttons .button , .container .buttons .num-button{
+    cursor:grab;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    box-shadow: 8px 8px 13px #cacaca, -8px -8px 13px #ffffff;
+}
+.num-button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(66,66,66);
+}
+.action-btn{
+    color: grey;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.calc-action-btn{
+    color: rgb(255,165,0);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: chocolate;
+
+}

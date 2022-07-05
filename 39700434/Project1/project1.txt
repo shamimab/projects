@@ -1,0 +1,24 @@
+function sumdig() {
+ var n1 = document.getElementById("num").value;
+ var n = n1;
+ var sum = 0;
+for( var i=1; i <= n1.length ; i++){
+    n = Number(n);
+    var m = n%10;
+    n =Math.floor(n/10) ;
+    var o =factorial(m);
+    sum = sum + o ;
+    
+}
+document.getElementById("result").innerHTML ="The Sum of Factorial's Digits :" +sum;
+}
+function factorial(n){
+    if(n==0 || n==1){
+       return 1;  
+    }else{
+        for(var i=(n-1); i>=1; i-- ){
+            n=n*i;
+        }
+        return n;
+    }
+}

@@ -1,0 +1,21 @@
+*{
+    background-color: bisque;
+}
+
+
+button{
+    display: block;
+    margin-left: 50px;
+    width: 15%;
+    padding: 20px;
+    background-color: cadetblue;
+    color: beige;
+    border: 2px solid white;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+}
+input{
+    width: 20%;
+    padding: 10px;
+}

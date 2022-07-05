@@ -1,0 +1,41 @@
+let btns =document.querySelectorAll(".num-button");
+let allBtns = document.querySelectorAll("button");
+let resultBox =document.querySelector("#result-box");
+let clearBtn = document.querySelector("#clear");
+let total = document.querySelector("#total");
+let clearOne = document.querySelector("#clearone")
+let btnSpread =[...btns];
+let allBtnsSpread = [...allBtns];
+
+btnSpread.forEach((button , i)=>{
+    button.addEventListener("click" , () =>{
+        if (resultBox.innerHTML=="0"){
+            resultBox.innerHTML="";
+        }
+        let value = btns[i].innerHTML;
+        resultBox.innerHTML+=value;
+
+    });
+});
+
+ 
+clearOne.addEventListener("click",()=>{
+
+    let inputs = resultBox.innerText;
+    let temp = String(inputs);
+    inputs = temp.substring(0,(temp.length)-1);
+    resultBox.innerText = inputs;
+ })
+
+
+total.addEventListener('click' , () =>{
+    let allInputs = resultBox.innerText;
+    resultBox.innerText = eval(allInputs);
+
+    console.log(eval(allInputs));
+})
+clearBtn.addEventListener('click',() =>{
+    resultBox.innerText = "0";
+})
+
+
